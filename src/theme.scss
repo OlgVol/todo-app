@@ -3,7 +3,7 @@
 
 
 $my-primary: mat-palette($mat-purple,  100);
-$my-accent: mat-palette($mat-red, 300);
+$my-accent: mat-palette($mat-grey, 300);
 
 $my-theme: mat-light-theme($my-primary, $my-accent);
 

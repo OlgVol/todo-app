@@ -1,5 +1,6 @@
 .action-buttons {
   margin-top: 20px;
+  margin-left: 20%;
   float: right;
 }
 button {
@@ -7,3 +8,21 @@ button {
   font-size: 12px;
   border-radius: 20px;
 }
+.meetings-button {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.meetings {
+  padding: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.meetings-btn {
+  display: inline-flex;
+}
+.items-number {
+  font-size: 8px;
+  font-weight: 100;
+  margin-top: 5px;
+}
+
