@@ -1,0 +1,15 @@
+<div>
+  <h1>{{title | titlecase}}</h1>
+  <form [formGroup]="taskForm">
+<mat-form-field appearance="outline" >
+<mat-label>Enter task name here</mat-label>
+<input matInput formControlName="taskName" type="name" placeholder="Enter task name here">
+</mat-form-field>
+<mat-form-field >
+  <mat-label>Complete until:</mat-label>
+  <input matInput formControlName="timePicker" [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>>
+</form>
+</div>
