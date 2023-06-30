@@ -1,6 +1,53 @@
 div {
-background-color: plum;
+  background-color: plum;
+}
+.header {
+  display: inline;
 }
 h1 {
+  padding-top: 20px;
+  font-weight: bold;
   text-align: center;
+}
+.exit-btn {
+  float: right;
+}
+.dialog-form {
+  padding: 60px;
+  width: 100vh;
+  height: 70vh;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.task-list {
+  background-color: white;
+  padding: 10px;
+}
+.task-list-actions {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+button {
+  margin: 20px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.expansion-panel {
+  margin-top: 10px;
+  font-size: 12px;
+  height: min-content;
+}
+.create-list-btn {
+  margin-left: 40%;
+}
+.save-btn {
+  margin: 10px;
+  margin-left: 40%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

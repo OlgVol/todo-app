@@ -1,15 +1,47 @@
 <div>
-  <h1>{{title | titlecase}}</h1>
-  <form [formGroup]="taskForm">
-<mat-form-field appearance="outline" >
-<mat-label>Enter task name here</mat-label>
-<input matInput formControlName="taskName" type="name" placeholder="Enter task name here">
-</mat-form-field>
-<mat-form-field >
-  <mat-label>Complete until:</mat-label>
-  <input matInput formControlName="timePicker" [matDatepicker]="picker">
-  <mat-hint>MM/DD/YYYY</mat-hint>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>>
-</form>
+  <div class="header">
+    <button class="exit-btn" mat-button (click)="onCloseDialog()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <h1>{{ title | titlecase }}</h1>
+  </div>
+  <div class="dialog-form">
+    <form [formGroup]="taskForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter task name here</mat-label>
+        <input
+          matInput
+          formControlName="taskName"
+          type="name"
+          placeholder="Enter task name here"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Complete until:</mat-label>
+        <input matInput formControlName="timePicker" [matDatepicker]="picker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="task-list">
+        <span>Add this task to the list:</span>
+        <div class="task-list-actions">
+          <mat-expansion-panel class="expansion-panel">
+            <mat-expansion-panel-header>
+              <mat-panel-title> Default </mat-panel-title>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+          <button
+            class="create-list-btn"
+            mat-raised-button
+            (click)="onCreateList()"
+          >
+            <mat-icon>add_circle</mat-icon>Create new task
+          </button>
+        </div>
+      </div>
+      <mat-dialog-actions>
+        <button class="save-btn" mat-raised-button>Save this task</button>
+      </mat-dialog-actions>
+    </form>
+  </div>
 </div>

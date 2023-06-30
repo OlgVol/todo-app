@@ -9,12 +9,14 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { MaterialModule } from './shared/material.module';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewTaskListComponent } from './new-task-list/new-task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroSectionComponent,
     NewTaskComponent,
+    NewTaskListComponent,
   ],
   imports: [
     BrowserModule,
