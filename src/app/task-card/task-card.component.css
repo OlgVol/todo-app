@@ -1,13 +1,10 @@
 mat-card {
-  width: 50%;
+  margin-top: 10px;
   height: 20%;
   display: flex;
   flex-direction: row;
 }
-.menu-btn {
- padding-inline-end: 0%;
-}
+
 mat-card-header {
   margin-top: 10px;
-  padding-right: 40%;
 }
