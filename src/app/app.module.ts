@@ -10,6 +10,8 @@ import { MaterialModule } from './shared/material.module';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewTaskListComponent } from './new-task-list/new-task-list.component';
+import { TaskCardComponent } from './task-card/task-card.component';
+import { TasksListComponent } from './tasks-list/tasks-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { NewTaskListComponent } from './new-task-list/new-task-list.component';
     HeroSectionComponent,
     NewTaskComponent,
     NewTaskListComponent,
+    TaskCardComponent,
+    TasksListComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatNativeDateModule,
     MatInputModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCardModule,
+    MatMenuModule
   ],
 })
 export class MaterialModule {}
