@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Meeting with colegues",
+      "time": "2023/05/11",
+      "category": "meetings"
+    },
+    {
+      "id": 2,
+      "title": "Alisos Birthday",
+      "time": "2023/04/19",
+      "category": "birthdays"
+    },
+    {
+      "id": 3,
+      "title": "Outdoor training",
+      "time": "2023/06/11",
+      "category": "sport"
+    },
+    {
+      "id": 4,
+      "title": "Buy a suitcase",
+      "time": "2023/07/03",
+      "category": "shopping"
+    }
+  ]
+}

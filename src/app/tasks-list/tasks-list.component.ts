@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ITask } from '../models/task.model';
+import { Subscription } from 'rxjs';
+import { TaskServiceService } from '../shared/task-service/task-service.service';
 
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
-  styleUrls: ['./tasks-list.component.css']
+  styleUrls: ['./tasks-list.component.css'],
 })
-export class TasksListComponent {
+export class TasksListComponent implements OnInit {
+  tasks: ITask[] = [];
+  sub!: Subscription;
 
+  constructor(public taskService: TaskServiceService) {}
+
+  ngOnInit() {
+    this.sub = this.taskService.getTasks().subscribe({
+      next: (tasks) => {
+        this.tasks = tasks;
+      },
+    });
+  }
 }

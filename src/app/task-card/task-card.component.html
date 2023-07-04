@@ -1,10 +1,10 @@
-<mat-card>
+<mat-card *ngFor="let task of tasks">
   <mat-card-header>
     <mat-card-title>
-      Annual meeting at the headquaters
-    </mat-card-title>
+{{task.title}}
+</mat-card-title>
     <mat-card-subtitle>
-      2023/05/18
+     {{task.time}}
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
