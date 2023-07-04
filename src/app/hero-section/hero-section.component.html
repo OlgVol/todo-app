@@ -1,13 +1,13 @@
 <div class="action-buttons">
-  <button mat-raised-button >View all tasks</button>
+  <button mat-raised-button (click)="viewAllTasks()">View all tasks</button>
   <button mat-raised-button color="primary" (click)="createTask()"> <mat-icon>add_circle</mat-icon>Create new task</button>
 </div>
-<div class="meetings-button">
-<button class="meetings" mat-raised-button color="accent">
+<div class="meetings-button"  >
+<button class="meetings" mat-raised-button color="accent" *ngIf="!viewTask">
   <div class="meetings-btn">
   Meetings<mat-icon>arrow_forward</mat-icon>
 </div>
 <p class="items-number">13 items in the list</p>
 </button>
 </div>
-<app-tasks-list></app-tasks-list>
+<app-tasks-list *ngIf="viewTask"></app-tasks-list>

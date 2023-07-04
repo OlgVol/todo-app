@@ -9,6 +9,7 @@ import { NewTaskComponent } from '../new-task/new-task.component';
   styleUrls: ['./hero-section.component.css']
 })
 export class HeroSectionComponent {
+viewTask = false
 
   constructor(
     private dialog: MatDialog
@@ -19,5 +20,9 @@ export class HeroSectionComponent {
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     this.dialog.open(NewTaskComponent, dialogConfig)
+  }
+
+  viewAllTasks() {
+  this.viewTask = !this.viewTask
   }
 }

@@ -1,4 +1,5 @@
 <mat-card *ngFor="let task of tasks">
+  <div class="card-title">
   <mat-card-header>
     <mat-card-title>
 {{task.title}}
@@ -7,6 +8,8 @@
      {{task.time}}
     </mat-card-subtitle>
   </mat-card-header>
+</div>
+<div class="card-action">
   <mat-card-actions>
   <button class="menu-btn" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
     <mat-icon>more_vert</mat-icon>
@@ -25,4 +28,5 @@
     </button>
   </mat-menu>
 </mat-card-actions>
+</div>
 </mat-card>
