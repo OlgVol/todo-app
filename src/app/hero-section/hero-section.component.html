@@ -3,7 +3,7 @@
   <button mat-raised-button color="primary" (click)="createTask()"> <mat-icon>add_circle</mat-icon>Create new task</button>
 </div>
 <div class="meetings-button"  >
-<button class="meetings" mat-raised-button color="accent" *ngIf="!viewTask">
+<button class="meetings" mat-raised-button color="accent" *ngIf="!viewTask" routerLink="/tasks">
   <div class="meetings-btn">
   Meetings<mat-icon>arrow_forward</mat-icon>
 </div>

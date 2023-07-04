@@ -13,6 +13,8 @@ import { NewTaskListComponent } from './new-task-list/new-task-list.component';
 import { TaskCardComponent } from './task-card/task-card.component';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TasksPageComponent } from './tasks-page/tasks-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     NewTaskListComponent,
     TaskCardComponent,
     TasksListComponent,
+    TasksPageComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
