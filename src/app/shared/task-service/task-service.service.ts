@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ITask } from 'src/app/models/task.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, tap, catchError, throwError } from 'rxjs';
+import { Observable, tap, catchError, throwError, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +17,11 @@ export class TaskServiceService {
       tap((data) => console.log('All: ', JSON.stringify(data))),
       catchError(this.handleError)
     );
+  }
+  getTasksByCategory(category: string): Observable<ITask | undefined> {
+    return this.getTasks().pipe(
+      map((tasks: ITask[]) => tasks.find((t) => t.category === category))
+    )
   }
   private handleError(err: HttpErrorResponse): Observable<never> {
     let errorMessage = '';
