@@ -14,6 +14,7 @@ import { TaskServiceService } from '../shared/task-service/task-service.service'
 })
 export class HeroSectionComponent extends TasksListComponent {
   viewTask = false;
+  viewCategories = false;
 
   constructor(private dialog: MatDialog, public service: TaskServiceService) {
     super(service);
@@ -28,5 +29,11 @@ export class HeroSectionComponent extends TasksListComponent {
 
   viewAllTasks() {
     this.viewTask = !this.viewTask;
+    this.viewCategories = !this.viewAllCategories;
+  }
+  viewAllCategories() {
+    this.viewCategories = !this.viewCategories;
+    this.viewTask = !this.viewTask;
+
   }
 }

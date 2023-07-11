@@ -15,6 +15,7 @@ import { TasksListComponent } from './tasks-list/tasks-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TasksPageComponent } from './tasks-page/tasks-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     TasksListComponent,
     TasksPageComponent,
     HomePageComponent,
+    CategoryListComponent,
   ],
   imports: [
     BrowserModule,

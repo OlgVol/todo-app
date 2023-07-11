@@ -12,6 +12,7 @@ export class TasksListComponent implements OnInit {
   tasks: ITask[] = [];
   sub!: Subscription;
   number: Number = 0;
+  categoryNumber: Number = 0;
 
 
   constructor(public taskService: TaskServiceService) {}
@@ -21,6 +22,7 @@ export class TasksListComponent implements OnInit {
       next: (tasks) => {
         this.tasks = tasks;
         this.number = this.tasks.length
+       // this.categoryNumber = this.tasks.getOwnPropertySymbol(category).length
       },
 
     });

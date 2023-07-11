@@ -1,9 +1,10 @@
 <div class="action-buttons">
-  <button mat-raised-button (click)="viewAllTasks()">View all tasks</button>
+  <button mat-raised-button (click)="viewAllTasks()" *ngIf="!viewTask">View all tasks</button>
+  <button mat-raised-button (click)="viewAllCategories()" *ngIf="!viewCategories && viewTask">View categories</button>
   <button mat-raised-button color="primary" (click)="createTask()"> <mat-icon>add_circle</mat-icon>Create new task</button>
 </div>
 <div class="meetings-button"  >
-<button class="meetings" mat-raised-button color="accent" *ngIf="!viewTask" routerLink="/tasks">
+<button class="meetings" mat-raised-button color="accent" *ngIf="!viewTask && !viewCategories" routerLink="/tasks">
   <div class="meetings-btn">
   Meetings<mat-icon>arrow_forward</mat-icon>
 </div>
@@ -11,3 +12,4 @@
 </button>
 </div>
 <app-tasks-list *ngIf="viewTask"></app-tasks-list>
+<app-category-list *ngIf="viewCategories"></app-category-list>
